@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card card-tall m-2">
         <div class="card-body">
             <h5 class="card-title">{{ project.name_project }}</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">{{ project.slug }}</h6>
@@ -23,4 +23,8 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.card-tall {
+    height: 300px;
+}
+</style>

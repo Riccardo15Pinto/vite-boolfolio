@@ -7,6 +7,11 @@ export default {
     },
     props: {
         project: 'Object',
+    },
+    methods: {
+        getBgColor(value) {
+            return `bg-${value}`;
+        }
     }
 }
 
@@ -24,7 +29,8 @@ export default {
                     <span>{{ project.type.label }}</span>
                 </div>
                 <ul class="list-group mt-3">
-                    <li class="list-group-item" v-for="tech in project.technologys">{{ tech.label }}</li>
+                    <li class="list-group-item" v-for="tech in project.technologys" :class="getBgColor(tech.color)">{{
+                        tech.label }}</li>
                 </ul>
             </div>
         </div>

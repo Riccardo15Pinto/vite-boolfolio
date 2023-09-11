@@ -20,7 +20,7 @@ export default {
     <div class="container my-3">
 
         <div class="row row-cols-3">
-            <div class="col" v-for="project in projects">
+            <div class="col" v-for="project in projects" :key="project.id">
                 <AppCard :project="project" />
             </div>
         </div>

@@ -1,9 +1,9 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import HomPage from './pages/HomPage.vue';
+
 
 export default {
-  components: { AppHeader, HomPage },
+  components: { AppHeader },
   data() {
     return {
     }
@@ -14,7 +14,7 @@ export default {
 
 <template>
   <AppHeader />
-  <HomPage />
+  <RouterView />
 </template>
 
 <style scoped></style>

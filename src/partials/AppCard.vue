@@ -1,9 +1,9 @@
 <script>
+import { router } from '../router';
+
 export default {
     data() {
-        return {
-
-        }
+        return {};
     },
     props: {
         project: 'Object',
@@ -12,7 +12,7 @@ export default {
         getBgColor(value) {
             return `bg-${value}`;
         }
-    }
+    },
 }
 
 </script>
@@ -32,13 +32,11 @@ export default {
                     <li class="list-group-item" v-for="tech in project.technologys" :class="getBgColor(tech.color)">{{
                         tech.label }}</li>
                 </ul>
+
+                <router-link :to="{ name: 'DetailPage', params: { id: project.id } }">Dettaglio</router-link>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-.card-tall {
-    /* height: 300px; */
-}
-</style>
+<style scoped></style>

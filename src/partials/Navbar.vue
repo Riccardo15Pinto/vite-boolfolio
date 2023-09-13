@@ -21,7 +21,14 @@ export default {
                             <a class="nav-link" href="#">BOOLFOLIO</a>
                         </div>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <span class="nav-link">
+                                <router-link :to="{ name: 'home' }">Home</router-link>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link">
+                                <router-link :to="{ name: 'FormPage' }">Form</router-link>
+                            </span>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
